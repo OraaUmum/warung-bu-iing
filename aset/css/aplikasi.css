@@ -1,0 +1,285 @@
+:root {
+    --warna-utama: #ffbd24;
+    --warna-utama-hover: #e5a500;
+    --warna-krem: #fff7e5;
+    --warna-latar: #fffdf8;
+    --warna-teks: #382b20;
+    --warna-sekunder: #7b746b;
+    --warna-border: #f0ece4;
+    --warna-putih: #ffffff;
+
+    --radius-kartu: 18px;
+    --bayangan-kartu: 0 5px 20px rgba(60, 45, 20, .045);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--warna-latar);
+    color: var(--warna-teks);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* NAVBAR ADMIN */
+.navbar-admin {
+    background: rgba(255, 255, 255, .97);
+    border-bottom: 1px solid var(--warna-border);
+    box-shadow: 0 2px 12px rgba(60, 45, 20, .035);
+    backdrop-filter: blur(10px);
+}
+
+.navbar-admin .navbar-brand {
+    color: var(--warna-teks);
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.navbar-admin .navbar-brand:hover {
+    color: var(--warna-teks);
+}
+
+.navbar-admin .navbar-toggler {
+    border: 1px solid var(--warna-border);
+    border-radius: 10px;
+    padding: 7px 10px;
+    box-shadow: none;
+}
+
+.navbar-admin .nav-link {
+    color: var(--warna-sekunder);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: .2s ease;
+}
+
+.navbar-admin .nav-link:hover {
+    background: var(--warna-krem);
+    color: var(--warna-teks);
+}
+
+.navbar-admin .nav-link.active {
+    background: var(--warna-krem);
+    color: #8b650b;
+    font-weight: 750;
+}
+
+.navbar-admin .navbar-collapse {
+    padding-top: 10px;
+}
+
+.brand-icon-admin {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff0c2;
+    border-radius: 13px;
+    font-size: 22px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* TOMBOL */
+.btn-warung {
+    background: var(--warna-utama);
+    border: 1px solid var(--warna-utama);
+    color: #352500;
+    font-weight: 700;
+    border-radius: 11px;
+}
+
+.btn-warung:hover,
+.btn-warung:focus {
+    background: var(--warna-utama-hover);
+    border-color: var(--warna-utama-hover);
+    color: #352500;
+}
+
+.btn-outline-warung {
+    border: 1px solid var(--warna-utama);
+    color: #8b650b;
+    border-radius: 11px;
+    font-weight: 650;
+}
+
+.btn-outline-warung:hover {
+    background: var(--warna-krem);
+    border-color: var(--warna-utama-hover);
+    color: var(--warna-teks);
+}
+
+.btn-logout {
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+/* KONTEN */
+main,
+.container {
+    --bs-gutter-x: 1.5rem;
+}
+
+.page-content {
+    padding-top: 28px;
+    padding-bottom: 35px;
+}
+
+.page-title {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--warna-teks);
+}
+
+.page-subtitle {
+    color: var(--warna-sekunder);
+    font-size: 14px;
+}
+
+/* KARTU */
+.card {
+    border: 1px solid var(--warna-border);
+    border-radius: var(--radius-kartu);
+    box-shadow: var(--bayangan-kartu);
+}
+
+.card-header {
+    background: var(--warna-putih);
+    border-bottom: 1px solid var(--warna-border);
+    padding: 17px 20px;
+    border-radius: var(--radius-kartu) var(--radius-kartu) 0 0 !important;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* FORM */
+.form-control,
+.form-select {
+    min-height: 43px;
+    border-color: #e8e1d5;
+    border-radius: 10px;
+    color: var(--warna-teks);
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--warna-utama);
+    box-shadow: 0 0 0 .2rem rgba(255, 189, 36, .17);
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 650;
+    color: var(--warna-teks);
+}
+
+/* TABEL */
+.table {
+    --bs-table-bg: transparent;
+    color: var(--warna-teks);
+    vertical-align: middle;
+}
+
+.table thead th {
+    background: var(--warna-krem);
+    color: #70551c;
+    font-size: 13px;
+    font-weight: 750;
+    white-space: nowrap;
+    border-bottom: 0;
+    padding: 13px 14px;
+}
+
+.table tbody td {
+    padding: 13px 14px;
+    font-size: 14px;
+}
+
+.table-responsive {
+    border-radius: 12px;
+}
+
+/* ALERT */
+.alert {
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* BADGE */
+.badge {
+    font-weight: 650;
+    padding: 7px 10px;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+.footer-admin {
+    color: var(--warna-sekunder);
+    font-size: 13px;
+    border-top: 1px solid var(--warna-border);
+    background: #fff;
+}
+
+/* MOBILE */
+@media (max-width: 991.98px) {
+    .navbar-admin .navbar-collapse {
+        padding-top: 12px;
+        padding-bottom: 5px;
+    }
+
+    .navbar-admin .navbar-nav {
+        gap: 3px;
+    }
+
+    .navbar-admin .nav-link {
+        padding: 12px 14px;
+    }
+
+    .navbar-admin .admin-nav-footer {
+        border-top: 1px solid var(--warna-border);
+        margin-top: 10px;
+        padding-top: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-content {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    .page-title {
+        font-size: 21px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .card-header {
+        padding: 15px 16px;
+    }
+
+    .table thead th,
+    .table tbody td {
+        padding: 11px 10px;
+        font-size: 13px;
+    }
+
+    .btn {
+        min-height: 38px;
+    }
+
+    .btn-sm {
+        min-height: 34px;
+    }
+}

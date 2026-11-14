@@ -1,0 +1,6 @@
+Options -Indexes
+
+# Hindari akses langsung ke file tersembunyi.
+<FilesMatch "^\.(?!well-known)">
+    Require all denied
+</FilesMatch>

@@ -1,0 +1,27 @@
+# Konfigurasi dan kredensial lokal
+.env
+.env.*
+config/database.php
+
+# Database lokal dan backup
+*.sql
+*.sql.gz
+*.sqlite
+*.db
+
+# File sementara dan log
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# File pengujian lokal
+tes_database.php
+
+# File sistem operasi
+.Trash-*

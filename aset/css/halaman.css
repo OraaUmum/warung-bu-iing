@@ -1,0 +1,697 @@
+/* =========================================================
+   WARUNG BU-IING — ADMIN DESIGN SYSTEM
+   Satu stylesheet untuk seluruh halaman admin.
+   ========================================================= */
+
+:root {
+    --warung-cream: #fff9ed;
+    --warung-cream-soft: #fffaf0;
+    --warung-yellow: #fff0c2;
+    --warung-yellow-border: #f5e9c9;
+    --warung-brown: #382b20;
+    --warung-brown-soft: #654321;
+    --warung-brown-muted: #76552c;
+    --warung-gold: #98700e;
+    --warung-text-muted: #7b746b;
+    --warung-border: #f0eadc;
+    --warung-border-soft: #f1ede5;
+    --warung-shadow: 0 4px 16px rgba(80, 60, 30, .04);
+    --warung-radius: 16px;
+    --warung-radius-sm: 10px;
+}
+
+/* ---------- Fondasi dan komponen bersama ---------- */
+
+.page-content {
+    min-width: 0;
+}
+
+.dashboard-welcome,
+.menu-heading,
+.pesanan-heading,
+.pembayaran-heading,
+.keuangan-heading,
+.laporan-heading {
+    padding: 24px;
+    border: 1px solid var(--warung-yellow-border);
+    border-radius: 18px;
+    background: linear-gradient(120deg, var(--warung-yellow), var(--warung-cream));
+}
+
+.dashboard-welcome h1,
+.menu-heading h1,
+.pesanan-heading h1,
+.pembayaran-heading h1,
+.keuangan-heading h1,
+.laporan-heading h1 {
+    color: var(--warung-brown);
+    font-weight: 800;
+}
+
+.menu-heading p,
+.pesanan-heading p,
+.pembayaran-heading p,
+.keuangan-heading p,
+.laporan-heading p {
+    color: #8b7355;
+}
+
+.dashboard-date {
+    color: var(--warung-text-muted);
+    font-size: 13px;
+}
+
+.keuangan-card,
+.pembayaran-card,
+.pesanan-card,
+.laporan-card,
+.menu-card {
+    overflow: hidden;
+    border: 1px solid var(--warung-border);
+    border-radius: var(--warung-radius);
+    background: #fff;
+    box-shadow: var(--warung-shadow);
+}
+
+.laporan-card {
+    height: 100%;
+}
+
+.keuangan-card .card-body,
+.pembayaran-card .card-body,
+.pesanan-card .card-body,
+.laporan-card .card-body,
+.menu-card .card-body {
+    padding: 20px;
+}
+
+.keuangan-card .card-header,
+.pembayaran-card .card-header,
+.pesanan-card .card-header,
+.laporan-card .card-header,
+.menu-card .card-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--warung-border);
+    background: #fff;
+}
+
+.dashboard-section-title,
+.keuangan-section-title,
+.laporan-section-title {
+    color: var(--warung-brown);
+    font-weight: 700;
+}
+
+.dashboard-section-title {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.stat-label,
+.status-label,
+.menu-summary-label {
+    color: var(--warung-text-muted);
+    font-size: 13px;
+}
+
+.stat-icon,
+.keuangan-stat .stat-icon,
+.pembayaran-stat .stat-icon,
+.laporan-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+}
+
+.stat-icon.yellow { color: #a77708; background: var(--warung-yellow); }
+.stat-icon.blue { color: #3975b9; background: #e8f2ff; }
+.stat-icon.orange { color: #bd7620; background: #fff0df; }
+.stat-icon.green { color: #278348; background: #e5f5e9; }
+
+.dashboard-stat,
+.keuangan-stat,
+.pembayaran-stat,
+.laporan-stat,
+.menu-summary {
+    height: 100%;
+    padding: 18px;
+    border: 1px solid var(--warung-border);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: var(--warung-shadow);
+}
+
+.stat-number,
+.laporan-stat-number {
+    color: var(--warung-brown);
+    font-size: 1.55rem;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.pembayaran-stat .stat-number {
+    font-size: 1.65rem;
+}
+
+.dashboard-stat .stat-number,
+.dashboard-stat .stat-value {
+    display: block;
+    margin: 3px 0 8px;
+    color: var(--warung-brown);
+    font-size: 1.55rem;
+    font-weight: 800;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-stat .stat-link {
+    display: inline-block;
+    margin-top: 2px;
+    color: var(--warung-gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dashboard-stat .stat-link:hover {
+    color: var(--warung-brown);
+}
+
+.dashboard-stat .stat-description {
+    margin-top: 0;
+    color: var(--warung-text-muted);
+    font-size: 12px;
+}
+
+.laporan-stat-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.stat-label {
+    margin-bottom: 7px;
+}
+
+.stat-value {
+    color: var(--warung-brown);
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.stat-link {
+    display: inline-block;
+    margin-top: 13px;
+    color: var(--warung-gold);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.stat-link:hover { color: var(--warung-brown); }
+
+.status-summary {
+    height: 100%;
+    padding: 18px;
+    border: 1px solid #f5eddd;
+    border-radius: 15px;
+    background: var(--warung-cream-soft);
+}
+
+.status-number {
+    color: var(--warung-brown);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    height: 100%;
+    padding: 16px;
+    border: 1px solid #f0ece4;
+    border-radius: 14px;
+    color: var(--warung-brown);
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.quick-action:hover {
+    transform: translateY(-2px);
+    border-color: #f3d98f;
+    background: var(--warung-cream-soft);
+    color: var(--warung-brown);
+}
+
+.quick-action-icon {
+    display: flex;
+    flex: 0 0 43px;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    background: var(--warung-yellow);
+    color: var(--warung-gold);
+    font-size: 20px;
+}
+
+.quick-action-title { font-size: 14px; font-weight: 750; }
+.quick-action-description { color: var(--warung-text-muted); font-size: 12px; }
+
+/* ---------- Menu ---------- */
+
+.menu-summary {
+    position: relative;
+}
+
+.menu-summary-number {
+    color: var(--warung-brown);
+    font-size: 1.65rem;
+    font-weight: 750;
+}
+
+.menu-summary > i {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    font-size: 1.1rem !important;
+}
+
+.menu-card .card-header h2 {
+    color: var(--warung-brown);
+    font-weight: 700;
+}
+
+.menu-form-section {
+    padding: 14px 16px;
+    border: 1px solid var(--warung-yellow-border);
+    border-radius: var(--warung-radius-sm);
+    background: var(--warung-cream-soft);
+}
+
+.menu-preview {
+    width: 100%;
+    max-width: 180px;
+    height: 130px;
+    border: 1px solid var(--warung-border);
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.menu-photo,
+.menu-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border: 1px solid var(--warung-border);
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.menu-photo-placeholder {
+    background: var(--warung-cream-soft);
+    color: var(--warung-brown-muted);
+    font-size: 1.35rem;
+}
+
+.menu-name { color: var(--warung-brown); font-weight: 700; }
+
+.menu-description {
+    max-width: 280px;
+    color: var(--warung-text-muted);
+    font-size: .8rem;
+    line-height: 1.5;
+}
+
+.menu-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.menu-actions form { margin: 0; }
+
+/* ---------- Form, filter, dan tombol ---------- */
+
+.keuangan-filter .form-control,
+.keuangan-filter .form-select,
+.keuangan-form .form-control,
+.keuangan-form .form-select,
+.pesanan-filter .form-control,
+.pesanan-filter .form-select,
+.pembayaran-filter .form-control,
+.pembayaran-filter .form-select,
+.laporan-filter .form-control,
+.laporan-filter .form-select,
+.modal-body .form-control,
+.modal-body .form-select {
+    min-height: 43px;
+    border-color: #e8dfce;
+    border-radius: var(--warung-radius-sm);
+}
+
+.keuangan-filter .form-control:focus,
+.keuangan-filter .form-select:focus,
+.keuangan-form .form-control:focus,
+.keuangan-form .form-select:focus,
+.pesanan-filter .form-control:focus,
+.pesanan-filter .form-select:focus,
+.pembayaran-filter .form-control:focus,
+.pembayaran-filter .form-select:focus,
+.laporan-filter .form-control:focus,
+.laporan-filter .form-select:focus,
+.modal-body .form-control:focus,
+.modal-body .form-select:focus {
+    border-color: #c49a5a;
+    box-shadow: 0 0 0 .2rem rgba(155, 107, 47, .12);
+}
+
+.btn-keuangan,
+.btn-laporan,
+.btn-pembayaran,
+.btn-pesanan {
+    border: 1px solid #9b6b2f;
+    border-radius: var(--warung-radius-sm);
+    background: #9b6b2f;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-keuangan:hover,
+.btn-laporan:hover,
+.btn-pembayaran:hover,
+.btn-pesanan:hover {
+    border-color: #805522;
+    background: #805522;
+    color: #fff;
+}
+
+.btn-detail,
+.btn-kelola {
+    border-radius: 8px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.pembayaran-total {
+    min-width: 145px;
+    padding: 14px 18px;
+    border: 1px solid var(--warung-yellow-border);
+    border-radius: var(--warung-radius-sm);
+    background: rgba(255, 255, 255, .75);
+    color: var(--warung-brown);
+}
+
+.pembayaran-filter { max-width: 100%; }
+.pembayaran-filter select { min-width: 160px; }
+
+/* ---------- Tabel ---------- */
+
+.keuangan-table,
+.laporan-table,
+.pembayaran-table,
+.pesanan-table {
+    margin-bottom: 0;
+}
+
+.keuangan-table thead th,
+.laporan-table thead th,
+.pembayaran-table thead th,
+.pesanan-table thead th,
+.menu-card .table thead th {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eee4d2;
+    background: var(--warung-cream);
+    color: var(--warung-brown-muted);
+    font-size: .82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.keuangan-table tbody td,
+.laporan-table tbody td,
+.pembayaran-table tbody td,
+.pesanan-table tbody td {
+    padding: 14px 12px;
+    border-color: var(--warung-border-soft);
+    font-size: .9rem;
+}
+
+.pembayaran-table tbody td,
+.pesanan-table tbody td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menu-card .table tbody td {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.keuangan-table tbody tr:hover,
+.laporan-table tbody tr:hover,
+.pembayaran-table tbody tr:hover,
+.pesanan-table tbody tr:hover {
+    background: #fffdf8;
+}
+
+/* ---------- Status, kode, dan notifikasi ---------- */
+
+.keuangan-badge,
+.badge-pembayaran,
+.badge-status {
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.kode-pembayaran,
+.kode-pesanan,
+.laporan-kode {
+    color: var(--warung-brown-muted);
+    font-weight: 700;
+}
+
+.pesanan-count {
+    padding: 9px 14px;
+    border: 1px solid #f0e4ce;
+    border-radius: 30px;
+    background: #fff;
+    color: #805522;
+    font-weight: 700;
+}
+
+.keuangan-alert,
+.alert-pembayaran {
+    border-radius: 12px;
+}
+
+/* ---------- Modal ---------- */
+
+.modal-content {
+    overflow: hidden;
+    border: 1px solid var(--warung-border);
+    border-radius: var(--warung-radius);
+}
+
+.modal-header {
+    border-bottom-color: var(--warung-border);
+    background: var(--warung-cream);
+}
+
+.modal-title {
+    color: var(--warung-brown-soft);
+    font-weight: 700;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--warung-border);
+}
+
+.modal-detail-pesanan .modal-body {
+    overflow-x: hidden;
+}
+
+.tabel-detail-pesanan {
+    width: 100%;
+    min-width: 560px;
+    margin-bottom: 0;
+}
+
+.tabel-detail-pesanan thead th {
+    padding: 13px 12px;
+    border-bottom: 1px solid #eee4d2;
+    background: #fff8e9;
+    color: var(--warung-brown-muted);
+    font-size: .85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.tabel-detail-pesanan tbody td {
+    padding: 13px 12px;
+    border-bottom: 1px solid var(--warung-border-soft);
+    font-size: .9rem;
+    vertical-align: middle;
+}
+
+.tabel-detail-pesanan tbody tr:last-child td { border-bottom: 0; }
+.tabel-detail-pesanan .kolom-menu { min-width: 160px; white-space: normal; }
+.tabel-detail-pesanan .kolom-angka { text-align: right; white-space: nowrap; }
+.tabel-detail-pesanan .kolom-jumlah { width: 80px; text-align: center; }
+
+.pesanan-total { max-width: 320px; }
+.pesanan-total-value { color: #9b6b2f; }
+
+/* ---------- Laporan ---------- */
+
+.laporan-catatan {
+    padding: 16px 18px;
+    border: 1px solid var(--warung-yellow-border);
+    border-radius: var(--warung-radius);
+    background: var(--warung-cream-soft);
+    color: var(--warung-brown);
+}
+
+/* ---------- Responsif ---------- */
+
+@media (max-width: 767px) {
+    .menu-heading,
+    .pesanan-heading,
+    .pembayaran-heading,
+    .keuangan-heading,
+    .laporan-heading {
+        padding: 18px;
+    }
+
+    .menu-heading h1,
+    .pesanan-heading h1,
+    .pembayaran-heading h1,
+    .keuangan-heading h1,
+    .laporan-heading h1 {
+        font-size: 1.4rem;
+    }
+
+    .keuangan-card .card-body,
+    .pembayaran-card .card-body,
+    .pesanan-card .card-body,
+    .laporan-card .card-body,
+    .menu-card .card-body {
+        padding: 16px;
+    }
+
+    .keuangan-card .card-header,
+    .pembayaran-card .card-header,
+    .pesanan-card .card-header,
+    .laporan-card .card-header,
+    .menu-card .card-header {
+        padding: 16px;
+    }
+
+    .dashboard-stat,
+    .keuangan-stat,
+    .pembayaran-stat,
+    .laporan-stat,
+    .menu-summary {
+        padding: 15px;
+    }
+
+    .dashboard-stat .stat-number,
+    .dashboard-stat .stat-value,
+    .keuangan-stat .stat-number,
+    .pembayaran-stat .stat-number,
+    .laporan-stat-number {
+        font-size: 1.25rem;
+    }
+
+    .pesanan-filter .btn { min-height: 42px; }
+
+    .pembayaran-filter { width: 100%; }
+    .pembayaran-filter select { min-width: 0; flex: 1; }
+
+    .menu-photo,
+    .menu-photo-placeholder {
+        width: 46px;
+        height: 46px;
+    }
+
+    .menu-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .menu-actions .btn { width: 100%; }
+}
+
+@media (max-width: 576px) {
+    .dashboard-welcome { padding: 20px; }
+    .status-summary { padding: 14px; }
+    .status-number { font-size: 22px; }
+    .menu-summary-number { font-size: 1.4rem; }
+}
+
+/* ---------- Cetak laporan ---------- */
+
+@media print {
+    @page {
+        size: landscape;
+        margin: 12mm;
+    }
+
+    body {
+        background: #fff !important;
+        font-size: 12px;
+    }
+
+    .no-print,
+    nav,
+    .navbar,
+    aside,
+    footer,
+    .sidebar,
+    .admin-navbar {
+        display: none !important;
+    }
+
+    .container-fluid,
+    #area-laporan {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .laporan-heading {
+        border: 1px solid #ddd !important;
+        background: #fff !important;
+    }
+
+    .laporan-card {
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+    }
+
+    .table-responsive { overflow: visible !important; }
+
+    .laporan-table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+        font-size: 10pt;
+    }
+
+    .laporan-table thead { display: table-header-group; }
+    .laporan-table tr { break-inside: avoid; }
+}
