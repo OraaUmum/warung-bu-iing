@@ -149,7 +149,7 @@ require __DIR__ . '/../includes/sidebar.php';
             </div>
 
             <div class="col-md-auto no-print">
-                <button type="button" class="btn btn-laporan"
+                <button type="button" class="btn btn-warung px-4 py-2"
                         onclick="window.print()">
                     <i class="bi bi-printer me-1"></i>
                     Cetak / Simpan PDF

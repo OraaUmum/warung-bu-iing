@@ -90,7 +90,7 @@ $menuNavigasi = [
                 <div class="admin-nav-footer ms-lg-2">
                     <a
                         href="<?= htmlspecialchars(url('proses/logout.php'), ENT_QUOTES, 'UTF-8') ?>"
-                        class="btn btn-outline-danger btn-logout px-3"
+                        class="btn btn-danger btn-logout px-3"
                         onclick="return confirm('Yakin ingin keluar dari panel admin?')"
                     >
                         <i class="bi bi-box-arrow-right me-1"></i>

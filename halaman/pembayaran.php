@@ -93,6 +93,7 @@ function warnaStatusPembayaran(string $status): string
 // Memanggil kerangka utama admin
 require __DIR__ . '/../includes/header.php';
 require __DIR__ . '/../includes/sidebar.php';
+
 ?>
 
 <head>
@@ -115,15 +116,6 @@ require __DIR__ . '/../includes/sidebar.php';
             <p class="mb-0">
                 Pantau transaksi dan kelola status pembayaran pelanggan.
             </p>
-        </div>
-
-        <div class="col-md-auto">
-            <div class="pembayaran-total">
-                <div class="small">Total Transaksi</div>
-                <div class="fs-3 fw-bold">
-                    <?= (int) ($jumlah_status['total'] ?? 0) ?>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -244,6 +236,87 @@ require __DIR__ . '/../includes/sidebar.php';
         <?php endif; ?>
     </form>
 </div>
+
+    <!-- Tabel Daftar Pembayaran -->
+    <div class="pembayaran-card">
+        <div class="table-responsive">
+            <table class="table pembayaran-table align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>Kode Pesanan</th>
+                        <th>Pelanggan</th>
+                        <th>Total Tagihan</th>
+                        <th>Metode</th>
+                        <th>Status Pembayaran</th>
+                        <th>Waktu Bayar</th>
+                        <th class="text-end">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php if (empty($pembayaran)): ?>
+                        <tr>
+                            <td colspan="7" class="text-center py-5">
+                                <div class="text-secondary mb-2">
+                                    <i class="bi bi-receipt fs-2"></i>
+                                </div>
+                                <div class="fw-semibold">Belum ada data pembayaran</div>
+                                <div class="small text-secondary">
+                                    Transaksi akan muncul di sini setelah tercatat.
+                                </div>
+                            </td>
+                        </tr>
+                    <?php else: ?>
+                        <?php foreach ($pembayaran as $item): ?>
+                            <tr>
+                                <td>
+                                    <span class="fw-semibold">
+                                        <?= e($item['kode_pesanan']) ?>
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="fw-semibold">
+                                        <?= e($item['nama_penerima']) ?>
+                                    </div>
+                                    <div class="small text-secondary">
+                                        <?= e($item['no_telepon']) ?>
+                                    </div>
+                                </td>
+                                <td class="fw-semibold">
+                                    <?= rupiah($item['total_harga']) ?>
+                                </td>
+                                <td>
+                                    <?= e(ucfirst((string) $item['metode'])) ?>
+                                </td>
+                                <td>
+                                    <span class="badge text-bg-<?= e(warnaStatusPembayaran((string) $item['status_pembayaran'])) ?>">
+                                        <?= e(labelStatusPembayaran((string) $item['status_pembayaran'])) ?>
+                                    </span>
+                                </td>
+                                <td>
+                                    <?php if (!empty($item['waktu_bayar'])): ?>
+                                        <?= e(date('d/m/Y H:i', strtotime($item['waktu_bayar']))) ?>
+                                    <?php else: ?>
+                                        <span class="text-secondary">-</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td class="text-end">
+                                    <button
+                                        type="button"
+                                        class="btn btn-sm btn-pembayaran"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modalPembayaran<?= (int) $item['id_pembayaran'] ?>"
+                                    >
+                                        <i class="bi bi-pencil-square me-1"></i>
+                                        Kelola
+                                    </button>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>
 
 <!-- Modal diletakkan di luar tabel -->

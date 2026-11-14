@@ -131,7 +131,7 @@ require __DIR__ . '/../includes/sidebar.php';
 <head>
     <link rel="stylesheet" type="text/css" href="/../aset/css/halaman.css">
 </head>
-<main class="container-fluid page-content px-3 px-lg-4 py-4">
+<main class="ontainer-fluid page-content px-3 px-lg-4">
     <!-- Header halaman -->
     <div class="pesanan-heading mb-4">
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
@@ -146,11 +146,6 @@ require __DIR__ . '/../includes/sidebar.php';
                 <p class="mb-0">
                     Pantau dan kelola seluruh pesanan pelanggan dengan mudah.
                 </p>
-            </div>
-
-            <div class="pesanan-count">
-                <i class="bi bi-receipt me-1"></i>
-                <?= count($pesanan) ?> Pesanan
             </div>
         </div>
     </div>

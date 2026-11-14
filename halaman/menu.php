@@ -80,7 +80,7 @@ require __DIR__ . '/../includes/sidebar.php';
             <a href="<?= e(url('katalog.php')) ?>"
                target="_blank"
                rel="noopener noreferrer"
-               class="btn btn-outline-warung">
+               class="btn btn-warung px-4 py-2">
                 <i class="bi bi-shop me-1"></i>
                 Lihat Katalog
             </a>
@@ -452,8 +452,8 @@ require __DIR__ . '/../includes/sidebar.php';
                                     <div class="menu-actions">
 
                                         <a href="menu.php?edit=<?= (int) $item['id_menu'] ?>"
-                                           class="btn btn-sm btn-outline-warung">
-                                            <i class="bi bi-pencil-square me-1"></i>
+                                           class="btn btn-sm btn-warung">
+                                            <i class="bi bi-pencil me-1"></i>
                                             Edit
                                         </a>
 
@@ -470,7 +470,7 @@ require __DIR__ . '/../includes/sidebar.php';
                                                    value="<?= (int) $item['id_menu'] ?>">
 
                                             <button type="submit"
-                                                    class="btn btn-sm btn-outline-danger">
+                                                    class="btn btn-sm btn-danger">
                                                 <i class="bi bi-trash me-1"></i>
                                                 Hapus
                                             </button>

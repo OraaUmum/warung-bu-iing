@@ -131,19 +131,6 @@ require __DIR__ . '/../includes/sidebar.php';
                     <?= date('d-m-Y') ?>
                 </div>
             </div>
-
-            <div class="col-md-4 text-md-end">
-                <div class="small text-secondary">Jumlah Transaksi</div>
-
-                <div class="fs-3 fw-bold" style="color: #79552c;">
-                    <?= $jumlah_transaksi ?>
-                </div>
-
-                <div class="small text-secondary">
-                    Pada periode terpilih
-                </div>
-            </div>
-
         </div>
     </section>
 
